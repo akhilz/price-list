@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link rel="icon" href="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f4a1.png" type="image/png">
+    <title>Price List - Elixir Solutions</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@700&family=Oswald:wght@500;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="config.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (SiteConfig.pageTitle) document.title = SiteConfig.pageTitle + " - Product Catalog";
+            document.querySelectorAll('[data-config]').forEach(el => {
+                const key = el.getAttribute('data-config');
+                if (SiteConfig[key]) el.innerHTML = SiteConfig[key];
+            });
+        });
+    </script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#2563eb", // Professional Tech Blue
+                        "background-light": "#f8fafc",
+                        "background-dark": "#0f172a",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                        logo: ["Dancing Script", "cursive"],
+                        heading: ["Oswald", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.75rem",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        .logo-text-script {
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .logo-text-bold {
+            font-family: 'Oswald', sans-serif;
+            letter-spacing: 0.1em;
+        }
+
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+    <header
+        class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                <div class="relative">
+                    <span class="material-icons text-primary text-3xl">lightbulb</span>
+                    <div class="absolute -top-1 -right-1 w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+                </div>
+                <div class="flex flex-col leading-none">
+                    <span class="logo-text-script text-xl text-primary leading-tight"
+                        data-config="companyNameFirst">elixir</span>
+                    <span class="logo-text-bold text-lg text-slate-700 dark:text-slate-300 uppercase leading-none"
+                        data-config="companyNameSecond">Solutions</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center gap-6">
+                <a href="index.html"
+                    class="flex items-center gap-2 font-medium text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">
+                    <span class="material-icons text-[20px]">home</span> Home
+                </a>
+                <a href="products.html" class="flex items-center gap-2 font-bold text-primary">
+                    <span class="material-icons text-[20px]">inventory_2</span> Catalog
+                </a>
+            </nav>
+        </div>
+    </header>
+    <main class="max-w-5xl mx-auto pb-24 md:pb-8">
+        <section
+            class="sticky top-[60px] z-40 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md px-4 py-4">
+            <div class="relative">
+                <input type="text" id="searchInput" onkeyup="filterProducts()" placeholder="Search components..."
+                    class="w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl py-3 pl-11 pr-4 text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary shadow-sm transition-all text-slate-900 dark:text-slate-100 placeholder-slate-400">
+                <span class="material-icons absolute left-3 top-3.5 text-slate-400 text-[20px]">search</span>
+            </div>
+        </section>
+        <section class="px-4 py-2">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-bold">Component Price List</h2>
+                <button onclick="downloadPDF()"
+                    class="flex items-center gap-2 bg-red-50 hover:bg-red-100 text-red-600 font-bold py-2 px-4 rounded-lg transition-colors text-sm border border-red-200">
+                    <span class="material-icons text-sm">picture_as_pdf</span> Download PDF
+                </button>
+            </div>
+            <div id="productList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Cards injected here -->
+            </div>
+            <div id="noResults" class="hidden text-center py-12 text-slate-500">
+                <span class="material-icons text-5xl mb-3 opacity-50">search_off</span>
+                <p>No matching components found.</p>
+            </div>
+        </section>
+    </main>
+    <nav
+        class="fixed bottom-0 left-0 right-0 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-6 py-3 pb-8 z-50 md:hidden">
+        <div class="max-w-5xl mx-auto flex justify-around items-center">
+            <a href="index.html"
+                class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors">
+                <span class="material-icons">home</span>
+                <span class="text-[10px] font-medium">Home</span>
+            </a>
+            <a href="products.html" class="flex flex-col items-center gap-1 text-primary">
+                <span class="material-icons">inventory_2</span>
+                <span class="text-[10px] font-medium">Catalog</span>
+            </a>
+        </div>
+    </nav>
+
+    <script>
+        async function loadPriceList() {
+            try {
+                const response = await fetch('data.json');
+                const data = await response.json();
+                const productList = document.getElementById("productList");
+                productList.innerHTML = "";
+
+                data.forEach(item => {
+                    const card = `
+                        <div class="product-item bg-white dark:bg-slate-800 p-4 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm flex flex-col gap-2 transition-all hover:shadow-md">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="font-bold text-slate-900 dark:text-white">${item.model}</h3>
+                                    <p class="text-sm text-slate-600 dark:text-slate-400">${item.part}</p>
+                                </div>
+                                <span class="px-2 py-1 ${item.badgeColor} text-[10px] font-bold rounded-lg uppercase tracking-wider">${item.quality}</span>
+                            </div>
+                            <div class="flex justify-between items-end mt-2 pt-3 border-t border-slate-100 dark:border-slate-700">
+                                <span class="text-xs text-slate-500 uppercase tracking-widest">Price</span>
+                                <span class="text-lg font-bold text-primary">${item.price}</span>
+                            </div>
+                        </div>
+                    `;
+                    productList.innerHTML += card;
+                });
+            } catch (error) {
+                console.error("Error loading the price list:", error);
+                document.getElementById("productList").innerHTML = `
+                    <div class="text-center text-red-500 bg-red-50 dark:bg-red-500/10 p-4 rounded-xl">
+                        <strong>Error:</strong> Could not load data.json. <br>
+                        If you opened this file directly from your computer (<code>file://</code> URL), your browser is blocking the request due to CORS security policies. <br>
+                        Please run a local web server, or deploy to GitHub Pages.
+                    </div>
+                `;
+            }
+        }
+
+        function filterProducts() {
+            const filter = document.getElementById("searchInput").value.toUpperCase();
+            const items = document.querySelectorAll(".product-item");
+            let found = false;
+
+            items.forEach(item => {
+                const model = item.querySelector("h3").textContent.toUpperCase();
+                const part = item.querySelector("p").textContent.toUpperCase();
+
+                if (model.indexOf(filter) > -1 || part.indexOf(filter) > -1) {
+                    item.style.display = "";
+                    found = true;
+                } else {
+                    item.style.display = "none";
+                }
+            });
+            document.getElementById("noResults").classList.toggle("hidden", !!items.length && !found);
+        }
+
+        function downloadPDF() {
+            const element = document.getElementById('productList');
+            const opt = {
+                margin: 10,
+                filename: SiteConfig.pdfFileName || 'Elixir_Solutions_Price_List.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+
+            // Remove grid classes temporarily so it prints as a list
+            element.classList.remove('md:grid-cols-2', 'lg:grid-cols-3');
+
+            html2pdf().set(opt).from(element).toPdf().get('pdf').then(function (pdf) {
+                var totalPages = pdf.internal.getNumberOfPages();
+                for (var i = 1; i <= totalPages; i++) {
+                    pdf.setPage(i);
+                    pdf.setFontSize(48);
+                    pdf.setTextColor(220, 220, 220); // Light gray watermark
+                    const watermarkText = SiteConfig.pdfWatermark || 'Elixir Solutions';
+                    pdf.text(watermarkText, 50, 100, { angle: 45 });
+                    pdf.text(watermarkText, 50, 200, { angle: 45 });
+                }
+            }).save().then(() => {
+                // Restore grid classes after PDF generation
+                element.classList.add('md:grid-cols-2', 'lg:grid-cols-3');
+            });
+        }
+
+        loadPriceList();
+    </script>
+</body>
+
+</html>

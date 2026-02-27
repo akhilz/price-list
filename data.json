@@ -1,0 +1,23 @@
+[
+    {
+        "model": "iPhone 13",
+        "part": "OLED Display Assembly",
+        "quality": "OEM Original",
+        "price": "₹8,499",
+        "badgeColor": "bg-green-100 text-green-800"
+    },
+    {
+        "model": "OnePlus 9R",
+        "part": "Battery (4500mAh)",
+        "quality": "Premium Copy",
+        "price": "₹2,199",
+        "badgeColor": "bg-blue-100 text-blue-800"
+    },
+    {
+        "model": "Samsung 21",
+        "part": "Back Glass Panel",
+        "quality": "Standard",
+        "price": "₹1,450",
+        "badgeColor": "bg-gray-100 text-gray-800"
+    }
+]
