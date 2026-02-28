@@ -4,23 +4,685 @@
         "part": "OLED Display Assembly",
         "category": "Displays",
         "quality": "OEM Original",
-        "price": "₹8,499",
-        "badgeColor": "bg-green-100 text-green-800"
+        "price": "\u20b98,499"
     },
     {
         "model": "OnePlus 9R",
         "part": "Battery (4500mAh)",
         "category": "Batteries",
         "quality": "Premium Copy",
-        "price": "₹2,199",
-        "badgeColor": "bg-blue-100 text-blue-800"
+        "price": "\u20b92,199"
     },
     {
         "model": "Samsung 21",
         "part": "Back Glass Panel",
         "category": "Back Panels",
         "quality": "Standard",
-        "price": "₹1,450",
-        "badgeColor": "bg-gray-100 text-gray-800"
+        "price": "\u20b91,450"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "ULTRA",
+        "category": "Watch Back Glass",
+        "quality": "OEM Original",
+        "price": "\u20b92,800"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-4 44MM",
+        "category": "Watch Back Glass",
+        "quality": "OEM Original",
+        "price": "\u20b9500"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-4 40MM",
+        "category": "Watch Back Glass",
+        "quality": "OEM Original",
+        "price": "\u20b9500"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-5 44MM",
+        "category": "Watch Back Glass",
+        "quality": "OEM Original",
+        "price": "\u20b9500"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-5 40MM",
+        "category": "Watch Back Glass",
+        "quality": "OEM Original",
+        "price": "\u20b9500"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-6 44MM",
+        "category": "Watch Back Glass",
+        "quality": "OEM Original",
+        "price": "\u20b91,500"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-6 40MM",
+        "category": "Watch Back Glass",
+        "quality": "OEM Original",
+        "price": "\u20b91,500"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-7 41MM",
+        "category": "Watch Back Glass",
+        "quality": "OEM Original",
+        "price": "\u20b91,200"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-7 45MM",
+        "category": "Watch Back Glass",
+        "quality": "OEM Original",
+        "price": "\u20b91,500"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-8 41MM",
+        "category": "Watch Back Glass",
+        "quality": "OEM Original",
+        "price": "\u20b91,200"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-8 45MM",
+        "category": "Watch Back Glass",
+        "quality": "OEM Original",
+        "price": "\u20b91,200"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-9 41MM",
+        "category": "Watch Back Glass",
+        "quality": "OEM Original",
+        "price": "\u20b92,500"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-9 45MM",
+        "category": "Watch Back Glass",
+        "quality": "OEM Original",
+        "price": "\u20b92,500"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-4 40MM WITH COIL",
+        "category": "Watch Back Glass With Coil",
+        "quality": "OEM Original",
+        "price": "\u20b91,500"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-4 44MM WITH COIL",
+        "category": "Watch Back Glass With Coil",
+        "quality": "OEM Original",
+        "price": "\u20b91,500"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-5 40MM WITH COIL",
+        "category": "Watch Back Glass With Coil",
+        "quality": "OEM Original",
+        "price": "\u20b91,500"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-5 44MM WITH COIL",
+        "category": "Watch Back Glass With Coil",
+        "quality": "OEM Original",
+        "price": "\u20b91,500"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-6 40MM WITH COIL",
+        "category": "Watch Back Glass With Coil",
+        "quality": "OEM Original",
+        "price": "\u20b91,500"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-6 44MM WITH COIL",
+        "category": "Watch Back Glass With Coil",
+        "quality": "OEM Original",
+        "price": "\u20b91,500"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-7 41MM WITH COIL",
+        "category": "Watch Back Glass With Coil",
+        "quality": "OEM Original",
+        "price": "\u20b91,800"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-7 45MM WITH COIL",
+        "category": "Watch Back Glass With Coil",
+        "quality": "OEM Original",
+        "price": "\u20b92,800"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-8 45MM WITH COIL",
+        "category": "Watch Back Glass With Coil",
+        "quality": "OEM Original",
+        "price": "\u20b94,000"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-9 41MM WITH COIL",
+        "category": "Watch Back Glass With Coil",
+        "quality": "OEM Original",
+        "price": "\u20b93,500"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-9 45MM WITH COIL",
+        "category": "Watch Back Glass With Coil",
+        "quality": "OEM Original",
+        "price": "\u20b93,500"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-SE 40MM WITH COIL",
+        "category": "Watch Back Glass With Coil",
+        "quality": "OEM Original",
+        "price": "\u20b92,000"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-SE 44MM WITH COIL",
+        "category": "Watch Back Glass With Coil",
+        "quality": "OEM Original",
+        "price": "\u20b92,000"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "Watch Ultra",
+        "category": "Watch Crome",
+        "quality": "OEM Original",
+        "price": "\u20b93,200"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-4 40MM",
+        "category": "Watch Crome",
+        "quality": "OEM Original",
+        "price": "\u20b91,500"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-4 44MM",
+        "category": "Watch Crome",
+        "quality": "OEM Original",
+        "price": "\u20b91,500"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-5 40MM",
+        "category": "Watch Crome",
+        "quality": "OEM Original",
+        "price": "\u20b91,500"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-5 44MM",
+        "category": "Watch Crome",
+        "quality": "OEM Original",
+        "price": "\u20b91,500"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-6 40MM",
+        "category": "Watch Crome",
+        "quality": "OEM Original",
+        "price": "\u20b91,500"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-6 44MM",
+        "category": "Watch Crome",
+        "quality": "OEM Original",
+        "price": "\u20b91,500"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-7 41MM",
+        "category": "Watch Crome",
+        "quality": "OEM Original",
+        "price": "\u20b91,500"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-7 45MM",
+        "category": "Watch Crome",
+        "quality": "OEM Original",
+        "price": "\u20b91,500"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-8 41MM",
+        "category": "Watch Crome",
+        "quality": "OEM Original",
+        "price": "\u20b91,500"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-8 45MM",
+        "category": "Watch Crome",
+        "quality": "OEM Original",
+        "price": "\u20b91,500"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-4 40MM",
+        "category": "Watch On/Off Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9300"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-4 44MM",
+        "category": "Watch On/Off Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9300"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-5 40MM",
+        "category": "Watch On/Off Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9350"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-5 44MM",
+        "category": "Watch On/Off Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9350"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-6 40MM",
+        "category": "Watch On/Off Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9350"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-7 41MM",
+        "category": "Watch On/Off Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9600"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-7 45MM",
+        "category": "Watch On/Off Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9600"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-4 44MM",
+        "category": "Watch Scollar Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9400"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-5 44MM",
+        "category": "Watch Scollar Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9400"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-6 40MM",
+        "category": "Watch Scollar Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9400"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-7 45MM",
+        "category": "Watch Scollar Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9400"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-1 38MM",
+        "category": "Watch 3D Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9200"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-1 42MM",
+        "category": "Watch 3D Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9200"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-2 38MM",
+        "category": "Watch 3D Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9200"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-2 42MM",
+        "category": "Watch 3D Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9200"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-3 38MM GPS",
+        "category": "Watch 3D Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9200"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-3 42MM GPS",
+        "category": "Watch 3D Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9200"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-3 42MM LTE",
+        "category": "Watch 3D Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9200"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-4 40MM",
+        "category": "Watch 3D Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9280"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-4 44MM",
+        "category": "Watch 3D Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9280"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-5 40MM",
+        "category": "Watch 3D Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9400"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-5 44MM",
+        "category": "Watch 3D Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9400"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-6 40MM",
+        "category": "Watch 3D Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9400"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-6 44MM",
+        "category": "Watch 3D Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9400"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-7 41MM",
+        "category": "Watch 3D Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9400"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-7 45MM",
+        "category": "Watch 3D Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9400"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-8 41MM",
+        "category": "Watch 3D Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9400"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-8 45MM",
+        "category": "Watch 3D Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9400"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "SERIES 1/2/3 GLASS 38MM",
+        "category": "Watch Touch & Glass",
+        "quality": "OEM Original",
+        "price": "\u20b9100"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "SERIES 1/2/3 GLASS 42MM",
+        "category": "Watch Touch & Glass",
+        "quality": "OEM Original",
+        "price": "\u20b9100"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "SERIES 4/5/6 GLASS 40MM",
+        "category": "Watch Touch & Glass",
+        "quality": "OEM Original",
+        "price": "\u20b9150"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "SERIES 4/5/6 GLASS 44MM",
+        "category": "Watch Touch & Glass",
+        "quality": "OEM Original",
+        "price": "\u20b9150"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "SERIES 7 GLASS 40MM",
+        "category": "Watch Touch & Glass",
+        "quality": "OEM Original",
+        "price": "\u20b9150"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "SERIES 7 GLASS 41MM",
+        "category": "Watch Touch & Glass",
+        "quality": "OEM Original",
+        "price": "\u20b9150"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "SERIES 1 TOUCH 38MM/42MM",
+        "category": "Watch Touch & Glass",
+        "quality": "OEM Original",
+        "price": "\u20b9250"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "SERIES 2/3 TOUCH 38MM/42MM",
+        "category": "Watch Touch & Glass",
+        "quality": "OEM Original",
+        "price": "\u20b9600"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "SERIES 4 TOUCH 40MM/44MM",
+        "category": "Watch Touch & Glass",
+        "quality": "OEM Original",
+        "price": "\u20b9400"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "SERIES 5 TOUCH 40MM/44MM",
+        "category": "Watch Touch & Glass",
+        "quality": "OEM Original",
+        "price": "\u20b9500"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "SERIES 6 TOUCH 40MM/44MM",
+        "category": "Watch Touch & Glass",
+        "quality": "OEM Original",
+        "price": "\u20b9500"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-1 38MM",
+        "category": "Watch Lcd Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9200"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-1 42MM",
+        "category": "Watch Lcd Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9200"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-2 38MM",
+        "category": "Watch Lcd Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9250"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-2 42MM",
+        "category": "Watch Lcd Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9250"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-3 38MM",
+        "category": "Watch Lcd Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9250"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-3 42MM",
+        "category": "Watch Lcd Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9250"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-4 40MM",
+        "category": "Watch Lcd Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9250"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-4 44MM",
+        "category": "Watch Lcd Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9250"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-5 40MM",
+        "category": "Watch Lcd Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9350"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-5 44MM",
+        "category": "Watch Lcd Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9350"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-SE 40MM",
+        "category": "Watch Lcd Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9400"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-SE 44MM",
+        "category": "Watch Lcd Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9400"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-6 40MM",
+        "category": "Watch Lcd Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9350"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-6 44MM",
+        "category": "Watch Lcd Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9350"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-7 41MM",
+        "category": "Watch Lcd Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9400"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-7 45MM",
+        "category": "Watch Lcd Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9400"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-8 41MM",
+        "category": "Watch Lcd Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9600"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "S-8 45MM",
+        "category": "Watch Lcd Flex",
+        "quality": "OEM Original",
+        "price": "\u20b9600"
+    },
+    {
+        "model": "Apple Watch",
+        "part": "WATCH ULTRA",
+        "category": "Watch Lcd Flex",
+        "quality": "OEM Original",
+        "price": "\u20b91,000"
     }
 ]

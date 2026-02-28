@@ -85,37 +85,71 @@
                     <span class="material-icons text-[20px]">inventory_2</span> Catalog
                 </a>
             </nav>
+            <button id="mobileMenuBtn" onclick="toggleMobileMenu()"
+                class="md:hidden flex items-center p-2 text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">
+                <span class="material-icons text-2xl">menu</span>
+            </button>
+        </div>
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobileMenu"
+            class="hidden md:hidden border-t border-slate-100 dark:border-slate-800 bg-white dark:bg-background-dark px-4 py-2 shadow-lg">
+            <nav class="flex flex-col space-y-2 pb-3 pt-2">
+                <a href="index.html"
+                    class="flex items-center gap-3 font-medium text-slate-600 dark:text-slate-400 hover:text-primary transition-colors px-3 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg">
+                    <span class="material-icons text-[20px]">home</span> Home
+                </a>
+                <a href="products.html"
+                    class="flex items-center gap-3 font-bold text-primary px-3 py-2 bg-primary/5 rounded-lg">
+                    <span class="material-icons text-[20px]">inventory_2</span> Catalog
+                </a>
+            </nav>
         </div>
     </header>
     <main class="max-w-5xl mx-auto pb-24 md:pb-8">
-        <section
-            class="sticky top-[60px] z-40 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md px-4 py-4">
-            <div class="flex flex-col sm:flex-row gap-3">
-                <div class="relative flex-1">
-                    <input type="text" id="searchInput" onkeyup="filterProducts()" placeholder="Search components..."
-                        class="w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl py-3 pl-11 pr-4 text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary shadow-sm transition-all text-slate-900 dark:text-slate-100 placeholder-slate-400">
-                    <span class="material-icons absolute left-3 top-3.5 text-slate-400 text-[20px]">search</span>
-                </div>
-                <div class="relative w-full sm:w-48 shrink-0">
-                    <select id="categorySelect" onchange="filterProducts()"
-                        class="w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl py-3 pl-10 pr-8 text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary shadow-sm transition-all text-slate-900 dark:text-slate-100 appearance-none bg-no-repeat bg-[right_0.5rem_center] bg-[length:1.5em_1.5em]"
-                        style="background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%2394a3b8%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E');">
-                        <option value="">All Categories</option>
-                    </select>
-                    <span
-                        class="material-icons absolute left-3 top-3.5 text-slate-400 text-[20px] pointer-events-none">category</span>
+        <section class="px-4 py-2 mt-2">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4 gap-3">
+                <h2 class="text-lg md:text-xl font-bold whitespace-nowrap mb-2 md:mb-0">Component Price List</h2>
+                <div class="flex flex-wrap items-center gap-2 w-full md:w-auto">
+                    <!-- Expanding Search -->
+                    <div id="inlineSearchContainer"
+                        class="relative hidden w-full md:w-auto md:flex-1 min-w-[150px] transition-all duration-300">
+                        <input type="text" id="searchInput" onkeyup="filterProducts()"
+                            placeholder="Search components..."
+                            class="w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg py-2 pl-8 pr-8 text-xs sm:text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary shadow-sm text-slate-900 dark:text-slate-100 placeholder-slate-400">
+                        <span
+                            class="material-icons absolute left-2 top-1/2 -translate-y-1/2 text-slate-400 text-[16px]">search</span>
+                        <button onclick="clearSearch()"
+                            class="absolute right-1 top-1/2 -translate-y-1/2 p-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors flex items-center justify-center">
+                            <span class="material-icons text-[14px]">close</span>
+                        </button>
+                    </div>
+
+                    <!-- Search Toggle Button -->
+                    <button id="searchToggleButton" onclick="toggleSearch()"
+                        class="flex items-center justify-center gap-1 sm:gap-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700/50 text-slate-700 dark:text-slate-300 font-bold py-2 px-3 sm:px-4 rounded-lg shadow-sm transition-colors text-xs sm:text-sm shrink-0">
+                        <span class="material-icons text-[18px]">search</span> <span
+                            class="hidden sm:inline">Search</span>
+                    </button>
+
+                    <!-- Category Dropdown -->
+                    <div class="relative flex-1 md:flex-none min-w-[140px] md:w-48 shrink-0">
+                        <select id="categorySelect" onchange="filterProducts()"
+                            class="w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg py-2 pl-8 pr-6 text-xs sm:text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary shadow-sm transition-all text-slate-900 dark:text-slate-100 appearance-none bg-no-repeat bg-[right_0.5rem_center] bg-[length:1em_1em]"
+                            style="background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%2394a3b8%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E');">
+                            <option value="">All Categories</option>
+                        </select>
+                        <span
+                            class="material-icons absolute left-2 top-[7px] text-slate-400 text-[16px] pointer-events-none">category</span>
+                    </div>
+
+                    <!-- PDF Download -->
+                    <button onclick="downloadPDF()" title="Download PDF"
+                        class="flex items-center justify-center w-[34px] h-[34px] sm:w-[38px] sm:h-[38px] bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700/50 text-slate-700 dark:text-slate-300 rounded-lg shadow-sm transition-colors shrink-0">
+                        <span class="material-icons text-[18px]">picture_as_pdf</span>
+                    </button>
                 </div>
             </div>
-        </section>
-        <section class="px-4 py-2">
-            <div class="flex justify-between items-center mb-4">
-                <h2 class="text-xl font-bold">Component Price List</h2>
-                <button onclick="downloadPDF()"
-                    class="flex items-center gap-2 bg-red-50 hover:bg-red-100 text-red-600 font-bold py-2 px-4 rounded-lg transition-colors text-sm border border-red-200">
-                    <span class="material-icons text-sm">picture_as_pdf</span> Download PDF
-                </button>
-            </div>
-            <div id="productList" class="flex flex-col gap-2">
+            <div id="productList" class="flex flex-col gap-1.5">
                 <!-- Items injected here -->
             </div>
             <div id="noResults" class="hidden text-center py-12 text-slate-500">
@@ -124,20 +158,6 @@
             </div>
         </section>
     </main>
-    <nav
-        class="fixed bottom-0 left-0 right-0 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-4 py-2 pb-4 z-50 md:hidden">
-        <div class="max-w-5xl mx-auto flex justify-around items-center">
-            <a href="index.html"
-                class="flex flex-col items-center gap-0.5 text-slate-400 hover:text-primary transition-colors">
-                <span class="material-icons text-[22px]">home</span>
-                <span class="text-[10px] font-medium leading-none">Home</span>
-            </a>
-            <a href="products.html" class="flex flex-col items-center gap-0.5 text-primary">
-                <span class="material-icons text-[22px]">inventory_2</span>
-                <span class="text-[10px] font-medium leading-none">Catalog</span>
-            </a>
-        </div>
-    </nav>
 
     <script>
         async function loadPriceList() {
@@ -159,17 +179,17 @@
 
                 data.forEach(item => {
                     const listItem = `
-                        <div class="product-item bg-white dark:bg-slate-800 p-3 sm:p-4 rounded-xl border border-slate-100 dark:border-slate-700 shadow-sm flex items-center justify-between gap-3 transition-colors hover:bg-slate-50 dark:hover:bg-slate-700/50" data-category="${(item.category || '').toLowerCase()}">
+                        <div class="product-item bg-white dark:bg-slate-800 py-1.5 px-3 rounded-lg border border-slate-100 dark:border-slate-700 shadow-sm flex items-center justify-between gap-2.5 transition-colors hover:bg-slate-50 dark:hover:bg-slate-700/50" data-category="${(item.category || '').toLowerCase()}">
                             <div class="flex-1 min-w-0">
-                                <div class="flex items-center gap-2 mb-0.5 sm:mb-1">
-                                    <h3 class="font-bold text-slate-900 dark:text-white text-sm sm:text-base truncate">${item.model}</h3>
-                                    <span class="px-1.5 py-0.5 ${item.badgeColor} text-[8px] sm:text-[10px] font-bold rounded uppercase tracking-wider whitespace-nowrap">${item.quality}</span>
+                                <div class="flex items-center gap-1.5 mb-0.5">
+                                    <h3 class="font-bold text-slate-900 dark:text-white text-xs sm:text-sm truncate">${item.model}</h3>
+                                    <span class="px-1 py-[1px] bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 text-[9px] font-bold rounded uppercase tracking-wider whitespace-nowrap leading-none">${item.quality}</span>
                                 </div>
-                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 truncate">${item.part}</p>
+                                <p class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 truncate leading-tight">${item.part}</p>
                             </div>
-                            <div class="text-right whitespace-nowrap">
-                                <span class="block text-[10px] sm:text-xs text-slate-500 uppercase tracking-widest mb-0.5">Price</span>
-                                <span class="text-sm sm:text-base font-bold text-primary">${item.price}</span>
+                            <div class="text-right whitespace-nowrap pl-2 border-l border-slate-100 dark:border-slate-700/50">
+                                <span class="block text-[9px] text-slate-400 uppercase tracking-widest leading-none mb-0.5">Price</span>
+                                <span class="text-sm font-bold text-primary leading-none block">${item.price}</span>
                             </div>
                         </div>
                     `;
@@ -184,6 +204,45 @@
                         Please run a local web server, or deploy to GitHub Pages.
                     </div>
                 `;
+            }
+        }
+
+        function toggleSearch() {
+            const container = document.getElementById("inlineSearchContainer");
+            const btn = document.getElementById("searchToggleButton");
+
+            if (container.classList.contains("hidden")) {
+                container.classList.remove("hidden");
+                btn.classList.add("hidden");
+                document.getElementById("searchInput").focus();
+            } else {
+                container.classList.add("hidden");
+                btn.classList.remove("hidden");
+                document.getElementById("searchInput").value = "";
+                filterProducts();
+            }
+        }
+
+        function clearSearch() {
+            const input = document.getElementById("searchInput");
+            if (input.value === "") {
+                toggleSearch(); // close if it's already empty
+            } else {
+                input.value = "";
+                filterProducts();
+                input.focus();
+            }
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById("mobileMenu");
+            const btnIcon = document.querySelector("#mobileMenuBtn .material-icons");
+            if (menu.classList.contains("hidden")) {
+                menu.classList.remove("hidden");
+                btnIcon.textContent = "close";
+            } else {
+                menu.classList.add("hidden");
+                btnIcon.textContent = "menu";
             }
         }
 
@@ -213,8 +272,30 @@
 
         function downloadPDF() {
             const element = document.getElementById('productList');
+
+            // Create a temporary header for the PDF
+            const headerDiv = document.createElement('div');
+            headerDiv.id = "pdfHeader";
+            headerDiv.className = "mb-6 pb-4 border-b-2 border-slate-800 text-center";
+
+            const now = new Date();
+            const dateString = now.toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' });
+            const timeString = now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' });
+
+            headerDiv.innerHTML = `
+                <h1 style="font-size: 24px; font-weight: bold; margin-bottom: 4px; color: #0f172a;">${SiteConfig.companyNameFirst} ${SiteConfig.companyNameSecond}</h1>
+                <p style="font-size: 11px; color: #475569; margin-bottom: 2px;">SCO 7, Opp. Amar Ashram, Near Lower Mall, PATIALA-147001</p>
+                <p style="font-size: 11px; color: #475569; margin-bottom: 8px;">Phone: ${SiteConfig.phone1} | ${SiteConfig.phone2}</p>
+                <div style="display: flex; justify-content: space-between; font-size: 10px; color: #64748b; margin-top: 10px; border-top: 1px solid #e2e8f0; padding-top: 4px;">
+                    <span>Price List Generated On: ${dateString} at ${timeString}</span>
+                </div>
+            `;
+
+            // Prepend header to the list
+            element.insertBefore(headerDiv, element.firstChild);
+
             const opt = {
-                margin: 10,
+                margin: [10, 10, 10, 10], // Top, Left, Bottom, Right
                 filename: SiteConfig.pdfFileName || 'Elixir_Solutions_Price_List.pdf',
                 image: { type: 'jpeg', quality: 0.98 },
                 html2canvas: { scale: 2 },
@@ -222,21 +303,31 @@
             };
 
             // Remove gap classes temporarily so it prints tighter
-            element.className = 'flex flex-col gap-1';
+            const originalClasses = element.className;
+            element.className = 'flex flex-col gap-0.5';
 
             html2pdf().set(opt).from(element).toPdf().get('pdf').then(function (pdf) {
                 var totalPages = pdf.internal.getNumberOfPages();
                 for (var i = 1; i <= totalPages; i++) {
                     pdf.setPage(i);
                     pdf.setFontSize(48);
-                    pdf.setTextColor(220, 220, 220); // Light gray watermark
+
+                    // Make watermark highly transparent and light
+                    pdf.setGState(new pdf.GState({ opacity: 0.1 }));
+                    pdf.setTextColor(200, 200, 200);
+
                     const watermarkText = SiteConfig.pdfWatermark || 'Elixir Solutions';
                     pdf.text(watermarkText, 50, 100, { angle: 45 });
                     pdf.text(watermarkText, 50, 200, { angle: 45 });
+
+                    // Restore opacity for any future operations just in case
+                    pdf.setGState(new pdf.GState({ opacity: 1.0 }));
                 }
             }).save().then(() => {
-                // Restore gap classes after PDF generation
-                element.className = 'flex flex-col gap-2';
+                // Restore classes and remove the header after generation
+                element.className = originalClasses;
+                const addedHeader = document.getElementById("pdfHeader");
+                if (addedHeader) addedHeader.remove();
             });
         }
 
